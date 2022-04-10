@@ -1,0 +1,2 @@
+# This file is used internally by FFMPEG.
+file 'file:c:/Users/Admin/Desktop/manim/media/videos/example_vs/480p15/partial_movie_files/MyScene/3163782288_1974534198_223132457.mp4'
