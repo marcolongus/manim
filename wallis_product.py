@@ -1,6 +1,6 @@
 from manim import *
 
-aprox = [(2*i)**2/((2*i-1)*(2*i+1)) for i in range(1,500)]
+aprox = [(2*i)**2/((2*i-1)*(2*i+1)) for i in range(1,1000)]
 wallis_product = []
 init_wallis = 1
 for i in range(len(aprox)):
@@ -33,7 +33,7 @@ class Wallis(Scene):
 		self.play(FadeOut(limite))
 		self.wait(0.5)
 		
-		for i in range(9, len(wallis_product) - 1, 25):
+		for i in range(9, len(wallis_product) - 1, 100):
 			new_limite = MathTex(f'W({i+1})={round(wallis_product[i], 4)}')
 			self.play(Transform(formula, new_limite))
 			self.wait(0.0001)
