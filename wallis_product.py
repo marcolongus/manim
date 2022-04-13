@@ -11,7 +11,6 @@ def advance_wallis(w, jump):
 	for _ in range(jump): next(w)
 
 
-
 class Wallis(Scene):
 
 	def construct(self):
@@ -31,10 +30,9 @@ class Wallis(Scene):
 			if i>0: lista[0] = lista[0] + f
 
 			new_formula = MathTex(f'W({i+1})=2 {lista[0]}')
-			b1 = Brace(new_formula)
 			new_limite = MathTex(f'W({i+1})={round(2*next(wallis_p), 3)}').shift(2*DOWN)
 			
-			self.play(Transform(formula, new_formula), Transform(limite, new_limite), Create(b1))
+			self.play(Transform(formula, new_formula), Transform(limite, new_limite))
 			self.wait(0.5)
 
 		self.play(Transform(formula, limite))
